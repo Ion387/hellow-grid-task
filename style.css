@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main_grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "a a b b c c"
+    "d d d d d d"
+    "e e f f f f"
+    "g g h h i i";
+  gap: 20px;
+}
+
+.picture {
+  margin-top: 24px;
+  /*   width: 100%; */
+}
+
+.picA {
+  grid-area: a;
+}
+.picB {
+  justify-self: center;
+  grid-area: b;
+}
+.picC {
+  grid-area: c;
+}
+.picD {
+  grid-area: d;
+}
+.picE {
+  align-self: start;
+  grid-area: e;
+}
+.picF {
+  justify-self: end;
+  grid-area: f;
+}
+.picG {
+  align-self: center;
+  justify-self: center;
+  grid-area: g;
+}
+.picH {
+  justify-self: center;
+  grid-area: h;
+}
+.picI {
+  justify-self: center;
+  grid-area: i;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    max-width: 580px;
+  }
+
+  .main_grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-template-areas:
+      "a c"
+      "b b"
+      "d d"
+      "e e"
+      "f f"
+      "g g"
+      "h i";
+  }
+
+  .picture {
+    width: auto;
+  }
+
+  .picD {
+    width: 100%;
+  }
+
+  .picE {
+    justify-self: center;
+    grid-area: e;
+  }
+  .picF {
+    justify-self: center;
+    grid-area: f;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 450px;
+    padding-bottom: 20px;
+  }
+  .main_grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .picture {
+    width: auto;
+  }
+  .picA {
+    align-self: center;
+  }
+
+  .picC {
+    align-self: center;
+  }
+
+  .picE {
+    align-self: center;
+  }
+  .picF {
+    justify-self: center;
+  }
+}
