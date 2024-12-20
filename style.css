@@ -62,7 +62,7 @@
 
 @media (max-width: 1080px) {
   .container {
-    max-width: 580px;
+    max-width: 560px;
   }
 
   .main_grid {
@@ -96,7 +96,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .container {
     max-width: 450px;
     padding-bottom: 20px;
